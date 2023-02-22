@@ -17,3 +17,5 @@ spec:
           mode: 420
           overwrite: true
           path: /etc/chrony.conf
+  kernelArguments:
+    - loglevel=7
