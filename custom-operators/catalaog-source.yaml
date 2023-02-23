@@ -1,0 +1,18 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  annotations:
+    target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+  name: pacman-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: Pacman Operators
+  icon:
+    base64data: ""
+    mediatype: ""
+  image: quay.io/mavazque/pacman-operator-index:v0.0.1
+  publisher: RHA
+  sourceType: grpc
+  updateStrategy:
+    registryPoll:
+      interval: 10m0s
