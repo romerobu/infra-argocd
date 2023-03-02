@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keycloak-server
+  namespace: openshift-operators
+spec:
+  destination:
+    server: 'https://kubernetes.default.svc'
+  project: default
+  source:
+    path: keycloak/deployment
+    repoURL: 'https://github.com/romerobu/infra-argocd.git'
+    targetRevision: HEAD
