@@ -1,0 +1,32 @@
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  name: cluster
+spec:
+  identityProviders:
+    - htpasswd:
+        fileData:
+          name: htpass-secret
+      mappingMethod: claim
+      name: my_htpasswd_provider
+      type: HTPasswd
+    - mappingMethod: claim
+      name: keycloak
+      openID:
+        ca:
+          name: keycloak-ca
+        claims:
+          email:
+            - email
+          groups:
+            - groups
+          name:
+            - name
+          preferredUsername:
+            - preferred_username
+        clientID: myclient
+        clientSecret:
+          name: keycloak-secret
+        issuer: >-
+          https://keycloak-keycloak.apps.argo-hub-2.sandbox2917.opentlc.com/realms/myrealm
+      type: OpenID

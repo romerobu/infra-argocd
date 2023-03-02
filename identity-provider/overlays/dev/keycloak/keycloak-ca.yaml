@@ -1,0 +1,27 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: keycloak-ca
+  namespace: openshift-config
+data: # Certificate from ingress controller
+  ca.crt: |
+    -----BEGIN CERTIFICATE-----
+    MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+    ZXNzLW9wZXJhdG9yQDE2Nzc2NjkwNjUwHhcNMjMwMzAxMTExMTA0WhcNMjUwMjI4
+    MTExMTA1WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2Nzc2NjkwNjUw
+    ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDUPj1cnSe1v/fMEmoQqxU3
+    28UrPsDljJ/OmZ/IzAVnv+188q6AvaNO/n5nmQ5r0436ZhBTRhSUIvTw/Rrt3R9R
+    A7E3UcDqbrD5KP5oGDwsd0qIptASYYI8EdFrsQV+CMvZntdg+lvVMOJQLYPkcHs5
+    712HKoLaIVT/DizZCdks8AfMCYThvAAHhRtWP6ulpniIQ8vlhE80XeXbhF7hg43T
+    Z4+Qv8m+9i+9Gt+5T488j6R7vViWNc06YJ0y6jq+f8PgfWr63nYyimpc79Ge4M07
+    5QWoDYZyaIiDhr+NCAQxZ/KSxvkveM6mXwaKcmbNCMdeMiA5V3giOb14Jl/xR7uX
+    AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+    A1UdDgQWBBShMKvs3h460dbh1O7sgZ9yL7fWtDANBgkqhkiG9w0BAQsFAAOCAQEA
+    SmSvgZM/nrPbTtPcfk/kYHxFByW/WdPsDy3Fk+hLO0RFXuCcWFq3lO16SJC6YEqQ
+    5/xHzcYLkN1otnw0Aoj0V/ermm4O3+HsZrDTXc2n11Qxn/jflA1cW+W7OjRgZWz1
+    J0m/IPPd0MnCqTZSOCX7b2PbcJL00qGt7+SCz/4SRle/KY+71dYbWHdltHr6v/Bp
+    UTD0QB6lDG6F0pws5wPwjFfZjetMV0Vk+0r0qKXtGBM0JmntRUuJqMz45wAGt7C1
+    lVoJYJ28c75kgolMG3A64sOBf0M4aUigBAKlVnoc6oyv3Gi+MHe+r26eqtiiq65+
+    dt489DVMJIW7Y5PhIe+GVQ==
+    -----END CERTIFICATE-----
+
